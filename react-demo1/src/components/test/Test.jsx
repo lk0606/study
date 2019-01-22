@@ -11,6 +11,7 @@ class Test extends React.Component {
         return (
             <div className={`container`}>
                 <h2>componentName: {this.state.name}</h2>
+                请输入:<input type="text"/>
                 <ul>
                     <li>test1</li>
                     <li>test2</li>
