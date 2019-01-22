@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './assets/image/logo.svg';
 import './assets/css/App.css';
-import Test from './components/Test'
+import Test from './components/test/Test'
 import Home from './components/Home'
 class App extends Component {
   // 模板  jsx

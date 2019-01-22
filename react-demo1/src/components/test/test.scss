@@ -1,3 +1,6 @@
 .uls{
-  background: red;
+  color: green;
+  li:nth-child(odd){
+    background: red;
+  }
 }
