@@ -27,7 +27,7 @@ export default function register() {
       window.location.toString()
     );
     if (publicUrl.origin !== window.location.origin) {
-      // Our service worker won't work if PUBLIC_URL is on a different origin
+      // Our service worker won'user work if PUBLIC_URL is on a different origin
       // from what our page is served on. This might happen if a CDN is used to
       // serve assets; see https://github.com/facebookincubator/create-react-app/issues/2374
       return;
@@ -88,7 +88,7 @@ function registerValidSW(swUrl: string) {
 }
 
 function checkValidServiceWorker(swUrl: string) {
-  // Check if the service worker can be found. If it can't reload the page.
+  // Check if the service worker can be found. If it can'user reload the page.
   fetch(swUrl)
     .then(response => {
       // Ensure service worker exists, and that we really are getting a JS file.
