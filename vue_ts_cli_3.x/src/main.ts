@@ -2,6 +2,11 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router/router'
 import store from './vuex/store'
+// import axios from 'axios'
+// import qs from 'qs'
+//
+// Vue.prototype.axios = axios
+// Vue.prototype.qs = qs
 import './registerServiceWorker'
 
 Vue.config.productionTip = false
