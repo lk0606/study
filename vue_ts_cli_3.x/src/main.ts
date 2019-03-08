@@ -9,6 +9,10 @@ import store from './vuex/store'
 // Vue.prototype.qs = qs
 import './registerServiceWorker'
 
+import { log } from '@/api/instance'
+
+Vue.prototype.log = log
+
 Vue.config.productionTip = false
 
 new Vue({

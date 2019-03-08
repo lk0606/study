@@ -5,7 +5,7 @@
 <script lang="ts">
 import echarts from 'echarts'
 import '../../node_modules/echarts/map/js/world.js'
-import { getCity } from '../api/instance.js'
+import { getCity } from '../api/instance'
 require('echarts/theme/macarons')
 var myData = [
   { name: '海门', value: [121.15, 31.89, 30] },
@@ -50,35 +50,34 @@ export default {
     this.initMap()
     this.onWindowResize()
   },
-  updated() {
+  updated () {
   },
   methods: {
-    axiosGet() {
+    axiosGet () {
       // debugger
       getCity().then(
         res => {
           // if (res.code === 0 && res.data.length !== 0) {
-            console.log(res.data.data,'res')
+          //   console.log(res.data.data,'res')
           // }
         }
       )
-        .catch( err => console.log(err,'err'))
+        .catch(err => console.log(err, 'err'))
       // console.log(getCity().then())
-
     },
-    onWindowResize() {
-      window.onresize = ()=> {
+    onWindowResize () {
+      window.onresize = () => {
         this.chart.resize()
       }
     },
-    getCityInfo() {
+    getCityInfo () {
       fetch('http://localhost:8080/json/city.json',
         {
           method: 'get'
         })
-        .then(res=> res.json())
-        .then(res=> {
-          console.log(res,'fetch')
+        .then(res => res.json())
+        .then(res => {
+          console.log(res, 'fetch')
         })
       // this.axios.get('http://localhost:8080/json/city.json')
       //   .then(res => {

@@ -1,16 +1,20 @@
 import * as React from 'react';
-
-class User extends React.Component {
+import '../App.css'
+class User extends React.Component< {} > {
     constructor(props: any) {
         super(props)
         // 数据
         this.state = {}
     }
-
+    // getAboutVal = () => {
+    //     console.log(this.refs)
+    // }
     public render() {
         return (
-            <div>
-                User
+            <div className={`App-title`}>
+                {/*<button onClick={this.getAboutVal}>*/}
+                    {/*获取about input值*/}
+                {/*</button>*/}
             </div>
         )
     }

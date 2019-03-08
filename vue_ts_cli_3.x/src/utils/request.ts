@@ -3,8 +3,11 @@ import qs from 'qs'
 
 // create an axios instance
 const service = axios.create({
-  baseURL: 'http://localhost:8080', // api的base_url
+  baseURL: 'http://localhost:3000', // api的base_url
   timeout: 10000, // request timeout
+  // headers: {
+  //   'lk-auth': 'lk-admin '
+  // }
 })
 
 // 发送请求前对请求数据进行处理
@@ -21,9 +24,11 @@ service.defaults.transformRequest = [function (data) {
 // 请求拦截器
 service.interceptors.request.use(
   config => {
+    // config.withCredentials = true
+    // config.headers['Authorization'] = 'Admin-Token'
     // do something before request is sent
     return config
-  },error => {
+  }, error => {
     // do something with request error
     Promise.reject(error)
   }

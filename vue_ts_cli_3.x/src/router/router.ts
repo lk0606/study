@@ -23,6 +23,16 @@ export default new Router({
       path: '/echarts',
       name: 'echarts',
       component: () => import('../views/Echarts.vue')
+    },
+    {
+      path: '/log',
+      name: 'log',
+      component: () => import('../views/Log.vue')
+    },
+    {
+      path: '/index',
+      name: 'index',
+      component: () => import('../views/Index.vue')
     }
   ]
 })
