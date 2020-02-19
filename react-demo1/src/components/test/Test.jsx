@@ -8,6 +8,7 @@ export default class Test extends React.Component {
         super(props)
         this.state = {
             name: 'test',
+            value: 1,
             list1: [1,2,3,4],
             // list2: [<h2>1</h2>,<h2>2</h2>,<h2>3</h2>,<h2>4</h2>],
             list3: [
@@ -20,6 +21,13 @@ export default class Test extends React.Component {
                 backgroundColor: 'blue'
             }
         }
+        this.handleChange = this.handleChange.bind(this)
+    }
+    handleChange(e) {
+        console.log(e.target.value, 'handleChange')
+        this.setState({
+            value: e.target.value
+        })
     }
     log(str) {
         return console.log(str)
@@ -42,7 +50,7 @@ export default class Test extends React.Component {
             <Router>
             <div className={`container`}>
                 <h2>componentName: {this.state.name}</h2>
-                请输入:<input type="text"/>
+                请输入:<input type="text" value={this.state.value} onChange={this.handleChange}/>
                 <ul className={`uls`}>
                     <li style={{ backgroundColor: `yellow` }}>
                         <Link to={`/home`}>toHome</Link>
